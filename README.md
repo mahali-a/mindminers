@@ -1,3 +1,5 @@
+# Mindminers
+
 ## Quick Start
 
 ```
