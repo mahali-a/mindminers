@@ -1,3 +1,5 @@
+import { useRouter } from 'next/navigation';
+
 import { Button } from '@/components/ui/button';
 
 interface CourseCardProps {
@@ -12,6 +14,12 @@ interface CourseCardProps {
 }
 
 const CourseCard: React.FC<CourseCardProps> = ({ imageSrc, title, description }) => {
+  const router = useRouter();
+
+  const handleEnrollClick = () => {
+    router.push('/course-details');
+  };
+
   return (
     <div className="course-card relative flex flex-col h-full bg-[#F9F6EF] rounded-xl animate-fade-in">
       <div className="relative p-2 sm:p-3">
@@ -60,7 +68,10 @@ const CourseCard: React.FC<CourseCardProps> = ({ imageSrc, title, description })
         <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow line-clamp-3">{description}</p>
 
         <div className="w-full">
-          <Button className="bg-blue-600 text-white text-xs sm:text-sm px-4 py-1.5 sm:py-2 h-auto w-full sm:w-auto rounded-lg sm:rounded-xl">
+          <Button
+            className="bg-blue-600 text-white text-xs sm:text-sm px-4 py-1.5 sm:py-2 h-auto w-full sm:w-auto rounded-lg sm:rounded-xl"
+            onClick={handleEnrollClick}
+          >
             Enroll Now
           </Button>
         </div>
