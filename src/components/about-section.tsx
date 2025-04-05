@@ -2,6 +2,7 @@
 
 // Ensure you import motion directly from framer-motion
 import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { SectionHeader } from './section-header';
@@ -34,11 +35,9 @@ const AboutSection = () => {
               reaches their fullest potential.
             </p>
 
-            <Button
-              variant="outline"
-              className="border-brand-blue text-brand-blue hover:bg-brand-blue/5 w-full sm:w-auto"
-            >
+            <Button className="bg-[#0057FF]  hover:bg-[#0057FF]/90  text-white px-6 sm:px-8 py-3 sm:py-4 h-auto text-base rounded-md w-full sm:w-auto">
               Learn more
+              <ArrowRight className="w-4 h-4" />
             </Button>
           </div>
 

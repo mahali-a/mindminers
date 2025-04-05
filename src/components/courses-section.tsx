@@ -24,8 +24,7 @@ interface Course {
 const courseData = [
   {
     id: 1,
-    imageSrc:
-      'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
+    imageSrc: '/images/course-1.png',
     title: 'Overcome Math Anxiety and Master the Basics',
     description:
       'Learn fundamental math concepts in a stress-free environment designed to build confidence and mathematical thinking.',
@@ -38,8 +37,7 @@ const courseData = [
   },
   {
     id: 2,
-    imageSrc:
-      'https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80',
+    imageSrc: '/images/course-2.png',
     title: 'Overcome Math Anxiety and Master the Basics',
     description: 'Break through mental blocks and develop solid foundations in mental arithmetic and problem-solving.',
     category: 'Math',
@@ -50,8 +48,7 @@ const courseData = [
   },
   {
     id: 3,
-    imageSrc:
-      'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1422&q=80',
+    imageSrc: '/images/course-3.png',
     title: 'Overcome Math Anxiety and Master the Basics',
     description:
       'Transform math anxiety into math confidence with our specialized cognitive approach to mathematical learning.',
@@ -63,8 +60,7 @@ const courseData = [
   },
   {
     id: 4,
-    imageSrc:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
+    imageSrc: '/images/course-4.png',
     title: 'Overcome Math Anxiety and Master the Basics',
     description:
       'Master the fundamentals of mathematics through our unique cognitive training approach designed to reduce anxiety.',
