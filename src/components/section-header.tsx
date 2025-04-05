@@ -28,7 +28,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
 
       {/* Main white button with black border */}
       <div className="relative z-10 bg-slate-50 rounded-xl sm:rounded-2xl border-2 sm:border-4 border-black flex items-center justify-between px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4">
-        <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold">{text}</h2>
+        <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-3xl font-bold">{text}</h2>
 
         {/* SVG icon displayed only if provided */}
         {svgContent && <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 ml-2 sm:ml-3 md:ml-4">{svgContent}</div>}

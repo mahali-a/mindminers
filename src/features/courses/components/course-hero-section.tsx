@@ -34,7 +34,7 @@ const CourseHeroSection = () => {
           </div>
 
           <div className="w-full lg:w-2/5 mt-6 lg:mt-0">
-            <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border-2 sm:border-4 border-yellow-300 max-w-md mx-auto lg:max-w-none">
+            <div className="relative rounded-xl sm:rounded-2xl overflow-hidden  max-w-md mx-auto lg:max-w-none">
               <img src="/images/course-detail.png" alt="Course thumbnail" className="w-full h-auto" />
             </div>
           </div>
