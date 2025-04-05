@@ -29,32 +29,16 @@ const CourseCard: React.FC<CourseCardProps> = ({ imageSrc, title, description })
         <div className="absolute -bottom-4 left-4 right-4 sm:left-6 sm:right-6 bg-[#F9F6EF] rounded-full py-1.5 sm:py-2 px-3 sm:px-4 flex items-center">
           <div className="flex -space-x-2 sm:-space-x-3">
             <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
-                alt="User"
-                className="w-full h-full object-cover"
-              />
+              <img src="/images/blink.png" alt="User" className="w-full h-full object-cover" />
             </div>
             <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
-                alt="User"
-                className="w-full h-full object-cover"
-              />
+              <img src="/images/ander.png" alt="User" className="w-full h-full object-cover" />
             </div>
             <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
-                alt="User"
-                className="w-full h-full object-cover"
-              />
+              <img src="/images/big-bird.png" alt="User" className="w-full h-full object-cover" />
             </div>
             <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
-                alt="User"
-                className="w-full h-full object-cover"
-              />
+              <img src="/images/bartender.png" alt="User" className="w-full h-full object-cover" />
             </div>
           </div>
           <div className="ml-1 sm:ml-2 text-gray-600 font-medium text-xs sm:text-sm whitespace-nowrap">
