@@ -6,10 +6,10 @@ const CourseHeroSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-10 items-center">
           <div className="flex-1 space-y-3 sm:space-y-4">
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+            <div className="flex flex-wrap items-center ">
               <div className="rounded-lg p-2">
                 <img
-                  src="/images/logo-pink.png"
+                  src="/images/logo-2.png"
                   alt="Mind Miners Logo"
                   className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain"
                 />
@@ -20,11 +20,20 @@ const CourseHeroSection = () => {
               </div>
               <div className="flex items-center gap-1 ml-2 sm:ml-4">
                 <div className="flex -space-x-1 sm:-space-x-2">
-                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-blue-400 border-2 border-white"></div>
-                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-green-400 border-2 border-white"></div>
-                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-purple-400 border-2 border-white"></div>
+                  <div className="w-6 h-6 sm:w-9 sm:h-9 rounded-full ">
+                    <img src="/images/blink.png" alt="User" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="w-6 h-6 sm:w-9 sm:h-9 rounded-full ">
+                    <img src="/images/big-bird.png" alt="User" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="w-6 h-6 sm:w-9 sm:h-9 rounded-full ">
+                    <img src="/images/bartender.png" alt="User" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="w-6 h-6 sm:w-9 sm:h-9 rounded-full b">
+                    <img src="/images/bill.png" alt="User" className="w-full h-full object-cover" />
+                  </div>
                 </div>
-                <span className="text-xs sm:text-sm text-gray-500 ml-1 sm:ml-2">• 42 students</span>
+                <span className="text-xs sm:text-sm text-gray-500 ml-1 sm:ml-2">+ 42 students</span>
               </div>
             </div>
 

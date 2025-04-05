@@ -44,7 +44,7 @@ const CorporateSection = () => {
           </div>
         </div>
 
-        <div className="relative md:absolute md:right-[-0px] md:-top-22 h-[300px] sm:h-[400px] md:h-[500px] md:z-10">
+        <div className="relative md:absolute md:right-[-0px] md:-top-33 h-[300px] sm:h-[400px] md:h-[500px] md:z-10">
           <img
             src="/images/person-with-laptop.png"
             alt="Corporate training"
