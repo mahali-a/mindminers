@@ -30,7 +30,7 @@ const TestimonialCarousel = () => {
       image:
         'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
       quote:
-        'The cognitive training program at Mind Miners has significantly enhanced our development team&apos;s problem-solving capabilities. We&apos;ve seen a 40% increase in solution efficiency.',
+        'The cognitive training program at Mind Miners has significantly enhanced our development team&apos;s problem-solving capabilities. y.',
     },
     {
       id: 2,
@@ -39,7 +39,7 @@ const TestimonialCarousel = () => {
       image:
         'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
       quote:
-        'Mind Miners transformed the way our team approaches problem-solving! After the Cognitive Training sessions, we became more productive and innovative. It&apos;s truly worth the investment.',
+        'Mind Miners transformed the way our team approaches problem-solving! After the Cognitive Training sessions, we became more productive and innovative. ',
     },
     {
       id: 3,
@@ -47,8 +47,7 @@ const TestimonialCarousel = () => {
       role: 'Director of Operations, Global Ed',
       image:
         'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
-      quote:
-        'Implementing Mind Miners&apos; techniques across our organization has reduced decision-making time by 30% while improving quality. Their approach to cognitive enhancement is revolutionary.',
+      quote: 'Implementing Mind Miners&apos; techniques across our organization has reduced decision-making  ',
     },
     {
       id: 4,
@@ -57,7 +56,7 @@ const TestimonialCarousel = () => {
       image:
         'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
       quote:
-        'The team-building exercises combined with cognitive training created a powerful synergy that transformed our department. Collaboration has improved dramatically.',
+        'The team-building exercises combined with cognitive training created a powerful synergy that transformed our department. ',
     },
     {
       id: 5,
@@ -66,7 +65,7 @@ const TestimonialCarousel = () => {
       image:
         'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
       quote:
-        'Mind Miners&apos; approach to problem-solving and creative thinking has been a game-changer for our product development process. Highly recommended!',
+        'Mind Miners&apos; approach to problem-solving and creative thinking has been a game-changer for our product development process. ',
     },
   ];
 
@@ -161,7 +160,7 @@ const TestimonialCarousel = () => {
         </motion.div>
       </div>
       {/* Section Title */}
-      <h2 className="text-3xl font-semibold text-center text-gray-800 mb-16">Hear from our success stories</h2>
+      <h2 className="text-3xl font-medium text-center text-gray-800 mb-16">Hear from our success stories</h2>
 
       {/* Testimonial Carousel */}
       <div className="w-[1600px] ml-[-100px] mx-auto relative">
@@ -215,26 +214,32 @@ const TestimonialCarousel = () => {
                   }}
                 >
                   <div
-                    className={`h-full flex flex-row rounded-2xl overflow-hidden transition-all duration-500 ${
-                      isCenter ? 'bg-white shadow-xl ring-1 ring-gray-100' : 'bg-white/80'
+                    className={`h-42 flex flex-row rounded-2xl overflow-hidden transition-all duration-500 ${
+                      isCenter ? 'bg-white  ' : 'bg-white/80'
                     }`}
                   >
                     {/* Profile Picture */}
-                    <div className={`relative ${isCenter ? 'aspect-[4/3]' : 'aspect-[3/2]'} bg-yellow-400 w-[200px]`}>
-                      <img src={testimonial.image} alt={testimonial.name} className="w-full h-full object-cover" />
+                    <div className={`relative ${isCenter ? 'aspect-[4/3]' : 'aspect-[3/2]'}  w-[200px]`}>
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className="w-full h-full object-cover rounded-xl"
+                      />
                     </div>
 
                     {/* Testimonial Content - Show more details for center */}
-                    <div className={`p-4 ${isCenter ? 'p-6' : ''} flex-grow flex flex-col`}>
-                      <h3 className={`font-bold text-blue-600 ${isCenter ? 'text-xl mb-1' : 'text-lg truncate'}`}>
+                    <div className={`px-4 py-1 pb-4 ${isCenter ? 'px-6' : ''} flex-grow flex flex-col`}>
+                      <h3 className={`font-bold text-blue-600 ${isCenter ? 'text-lg mb-1' : 'text-lg truncate'}`}>
                         {testimonial.name}
                       </h3>
 
-                      <p className={`text-gray-600 ${isCenter ? 'mb-4' : 'text-sm truncate'}`}>{testimonial.role}</p>
+                      <p className={`text-gray-600 text-xs ${isCenter ? 'mb-2' : 'text-sm truncate'}`}>
+                        {testimonial.role}
+                      </p>
 
                       {isCenter && (
                         <>
-                          <div className="mb-4 text-pink-500 ">
+                          <div className="mb-2 text-pink-300 ">
                             <svg
                               className="w-5 h-5"
                               fill="currentColor"

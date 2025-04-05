@@ -8,7 +8,7 @@ const Hero = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-0">
       <div className="relative max-w-7xl bg-[#FFF9E9] rounded-3xl mx-2   my-4 sm:my-6 border-2 sm:border-4 border-[#0057FF] overflow-hidden shadow-[-5px_5px_0px_0px_#0057FF] sm:shadow-[-10px_10px_0px_0px_#0057FF]">
         {/* <div className={`absolute bg-red-500 rounded-2xl w-full h-full top-3 right-3 z-0`}></div> */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-8 md:pt-12">
           <div className="flex flex-col items-center text-center">
             <div className="mb-4 sm:mb-6">
               <GradientBadge text="NEVER STOP LEARNING" />
