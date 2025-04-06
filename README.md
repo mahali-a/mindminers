@@ -4,7 +4,7 @@
 
 ```
 # pnpm
-pnpm create next-app -e https://github.com/jpedroschmitz/typescript-nextjs-starter
+pnpm create next-app -e https://github.com/mindminerstech/mindminers.git
 ```
 
 ### Development
