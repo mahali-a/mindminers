@@ -1,17 +1,11 @@
 import React from 'react';
 
-import CoursesSection from '@/components/courses-section';
-import Footer from '@/components/footer';
-import CtaSection from '@/components/scta-section';
-import CoursesHero from '@/features/courses/components/courses-hero';
+import Courses from '@/features/courses/courses';
 
 export default function page() {
   return (
     <div>
-      <CoursesHero />
-      <CoursesSection />
-      <CtaSection />
-      <Footer />
+      <Courses />
     </div>
   );
 }
