@@ -93,11 +93,11 @@ const Hero = () => {
         </div>
 
         {/* Decorative elements - hidden on mobile */}
-        <div className=" sm:block hidden  absolute top-60 left-60 w-12 sm:w-30 h-12 sm:h-30 rotate-12">
+        <div className=" sm:block hidden  absolute top-50 left-60 w-12 sm:w-30 h-12 sm:h-30 rotate-12">
           <img src="/analysis.svg" alt="Book" className="w-full h-full object-cover" />
         </div>
 
-        <div className=" sm:block absolute hidden top-60 right-60 w-12 sm:w-30 h-12 sm:h-30 -rotate-12">
+        <div className=" sm:block absolute hidden top-50 right-60 w-12 sm:w-30 h-12 sm:h-30 -rotate-12">
           <img src="/brain.svg" alt="Book" className="w-full h-full object-cover" />
         </div>
       </div>

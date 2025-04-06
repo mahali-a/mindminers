@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useState } from 'react';
 
-import { Button } from '@/components/ui/button';
+import { CustomButton } from '@/components/common';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import CourseCard from './courses-card';
 import { SectionHeader } from './section-header';
@@ -115,7 +115,7 @@ const CoursesSection = () => {
   const activeCourses = tabCoursesMap[activeTab] || [];
 
   return (
-    <section className="section-container max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-16 md:my-20 md:mb-40 mx-auto pb-12">
+    <section className="section-container max-w-7xl px-4 sm:px-6 lg:px-8 py-10  md:mb-40 mx-auto pb-12">
       <div className="text-center mb-8">
         <motion.div
           initial={{ y: 20, opacity: 0 }}
@@ -171,7 +171,7 @@ const CoursesSection = () => {
         </div>
 
         {/* Using a single content area with AnimatePresence to animate items in/out */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 min-h-[400px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 md:gap-8 min-h-[400px]">
           <AnimatePresence>
             {activeCourses.map((course: Course) => (
               <motion.div
@@ -206,12 +206,16 @@ const CoursesSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
         >
-          <Button
+          <CustomButton
             variant="outline"
-            className="border-[#0056D2] font-medium py-5 px-4 text-sm md:text-lg text-[#0056D2] hover:bg-[#0056D2] hover:text-white transition-all duration-300 w-full border-2 sm:w-auto"
+            size="md"
+            withIcon={true}
+            endIcon={<span className="ml-2">→</span>}
+            className="w-full max-w-xs mx-auto sm:max-w-none sm:w-auto"
+            href="/courses"
           >
-            View all courses <span className="ml-2">→</span>
-          </Button>
+            View all courses
+          </CustomButton>
         </motion.div>
       </div>
     </section>

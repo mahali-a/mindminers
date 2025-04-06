@@ -1,8 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 
-import { Button } from '@/components/ui/button';
+import { CustomButton } from '@/components/common';
 import { SectionHeader } from './section-header';
 
 const CorporateSection = () => {
@@ -36,15 +37,21 @@ const CorporateSection = () => {
                 training solutions are designed to foster innovation and productivity in the workplace.
               </p>
               <div className="flex justify-center md:justify-start">
-                <Button className="bg-blue-600 hover:bg-brand-blue/90 text-white w-full sm:w-auto">
+                <CustomButton
+                  variant="primary"
+                  size="md"
+                  withIcon={true}
+                  endIcon={<ArrowRight className="w-4 h-4 md:w-5 md:h-5" />}
+                  className="w-full sm:w-auto text-sm md:text-base py-2 md:py-3 px-4 md:px-6 h-auto"
+                >
                   Book a session
-                </Button>
+                </CustomButton>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="relative md:absolute md:right-[-0px] md:-top-33 h-[300px] sm:h-[400px] md:h-[500px] md:z-10">
+        <div className="relative md:absolute md:right-[-0px] md:-top-30 h-[300px] sm:h-[400px] md:h-[500px] md:z-10">
           <img
             src="/images/person-with-laptop.png"
             alt="Corporate training"
