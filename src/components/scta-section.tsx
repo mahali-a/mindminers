@@ -1,6 +1,7 @@
+import { ArrowRight } from 'lucide-react';
 import React from 'react';
 
-import { Button } from '@/components/ui/button';
+import { CustomButton } from '@/components/common';
 
 const CtaSection = () => {
   return (
@@ -16,9 +17,17 @@ const CtaSection = () => {
             <p className="text-blue-100 max-w-md mx-auto md:mx-0">
               Join the thousands of students who&apos;ve already transformed their learning with MindMiners.
             </p>
-            <Button className="bg-white text-[#0056D2] rounded-full hover:bg-blue-50 font-medium px-6 py-3 h-auto text-base">
+            <CustomButton
+              variant="light"
+              size="md"
+              rounded="full"
+              withIcon={true}
+              endIcon={<ArrowRight className="w-4 h-4 md:w-5 md:h-5" />}
+              className="w-full max-w-xs mx-auto sm:max-w-none sm:w-auto text-sm md:text-base py-2 md:py-3 px-4 md:px-8 h-auto"
+              href="/enroll"
+            >
               Get Started Today
-            </Button>
+            </CustomButton>
           </div>
           <div className="flex justify-center md:justify-end">
             <img

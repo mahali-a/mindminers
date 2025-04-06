@@ -8,6 +8,7 @@ import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 import * as z from 'zod';
 
+import { CustomButton } from '@/components/common';
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
@@ -67,25 +68,26 @@ const EnrollmentForm = () => {
   }
 
   return (
-    <div className="mx-auto md:mt-20 max-w-4xl bg-white rounded-lg p-6">
+    <div className="mx-auto mt-4 sm:mt-10 md:mt-20 max-w-4xl bg-white rounded-lg   p-4 sm:p-6 md:p-8">
+      <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8 text-gray-900">Enrollment Application</h2>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 sm:space-y-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {/* First Name */}
             <FormField
               control={form.control}
               name="firstName"
               render={({ field }) => (
                 <FormItem className="w-full">
-                  <FormLabel className="font-medium text-base">First Name</FormLabel>
+                  <FormLabel className="font-medium text-sm sm:text-base">First Name</FormLabel>
                   <FormControl>
                     <Input
                       placeholder="Enter first name"
-                      className="bg-gray-50 w-full h-12 text-base px-4"
+                      className="bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4"
                       {...field}
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm text-red-500" />
                 </FormItem>
               )}
             />
@@ -96,11 +98,15 @@ const EnrollmentForm = () => {
               name="lastName"
               render={({ field }) => (
                 <FormItem className="w-full">
-                  <FormLabel className="font-medium text-base">Last Name</FormLabel>
+                  <FormLabel className="font-medium text-sm sm:text-base">Last Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="Enter last name" className="bg-gray-50 w-full h-12 text-base px-4" {...field} />
+                    <Input
+                      placeholder="Enter last name"
+                      className="bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4"
+                      {...field}
+                    />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm text-red-500" />
                 </FormItem>
               )}
             />
@@ -111,19 +117,19 @@ const EnrollmentForm = () => {
               name="dateOfBirth"
               render={({ field }) => (
                 <FormItem className="flex flex-col w-full">
-                  <FormLabel className="font-medium text-base">Date of Birth</FormLabel>
+                  <FormLabel className="font-medium text-sm sm:text-base">Date of Birth</FormLabel>
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
                         <Button
                           variant={'outline'}
                           className={cn(
-                            'w-full h-12 pl-4 text-left font-normal bg-gray-50 text-base',
+                            'w-full h-10 sm:h-12 pl-3 sm:pl-4 text-left font-normal bg-[#F5F5F5] border-0 text-sm sm:text-base',
                             !field.value && 'text-muted-foreground'
                           )}
                         >
                           {field.value ? format(field.value, 'MM/dd/yyyy') : <span>mm/dd/yy</span>}
-                          <CalendarIcon className="ml-auto h-5 w-5 opacity-50" />
+                          <CalendarIcon className="ml-auto h-4 sm:h-5 w-4 sm:w-5 opacity-50" />
                         </Button>
                       </FormControl>
                     </PopoverTrigger>
@@ -137,7 +143,7 @@ const EnrollmentForm = () => {
                       />
                     </PopoverContent>
                   </Popover>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm text-red-500" />
                 </FormItem>
               )}
             />
@@ -148,29 +154,29 @@ const EnrollmentForm = () => {
               name="gender"
               render={({ field }) => (
                 <FormItem className="w-full">
-                  <FormLabel className="font-medium text-base">Gender</FormLabel>
+                  <FormLabel className="font-medium text-sm sm:text-base">Gender</FormLabel>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
-                      <SelectTrigger className="bg-gray-50 w-full h-12 text-base px-4">
-                        <SelectValue placeholder="Select gender" className="text-base" />
+                      <SelectTrigger className="bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4">
+                        <SelectValue placeholder="Select gender" className="text-sm sm:text-base" />
                       </SelectTrigger>
                     </FormControl>
-                    <SelectContent className="text-base">
-                      <SelectItem value="male" className="text-base py-3">
+                    <SelectContent className="text-sm sm:text-base">
+                      <SelectItem value="male" className="text-sm sm:text-base py-2 sm:py-3">
                         Male
                       </SelectItem>
-                      <SelectItem value="female" className="text-base py-3">
+                      <SelectItem value="female" className="text-sm sm:text-base py-2 sm:py-3">
                         Female
                       </SelectItem>
-                      <SelectItem value="other" className="text-base py-3">
+                      <SelectItem value="other" className="text-sm sm:text-base py-2 sm:py-3">
                         Other
                       </SelectItem>
-                      <SelectItem value="prefer-not-to-say" className="text-base py-3">
+                      <SelectItem value="prefer-not-to-say" className="text-sm sm:text-base py-2 sm:py-3">
                         Prefer not to say
                       </SelectItem>
                     </SelectContent>
                   </Select>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm text-red-500" />
                 </FormItem>
               )}
             />
@@ -181,15 +187,15 @@ const EnrollmentForm = () => {
               name="email"
               render={({ field }) => (
                 <FormItem className="w-full">
-                  <FormLabel className="font-medium text-base">Email Address</FormLabel>
+                  <FormLabel className="font-medium text-sm sm:text-base">Email Address</FormLabel>
                   <FormControl>
                     <Input
                       placeholder="Enter email address"
-                      className="bg-gray-50 w-full h-12 text-base px-4"
+                      className="bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4"
                       {...field}
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm text-red-500" />
                 </FormItem>
               )}
             />
@@ -200,11 +206,15 @@ const EnrollmentForm = () => {
               name="phone"
               render={({ field }) => (
                 <FormItem className="w-full">
-                  <FormLabel className="font-medium text-base">Phone Number</FormLabel>
+                  <FormLabel className="font-medium text-sm sm:text-base">Phone Number</FormLabel>
                   <FormControl>
-                    <Input placeholder="+XX XX XXX XXXX" className="bg-gray-50 w-full h-12 text-base px-4" {...field} />
+                    <Input
+                      placeholder="+XX XX XXX XXXX"
+                      className="bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4"
+                      {...field}
+                    />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm text-red-500" />
                 </FormItem>
               )}
             />
@@ -215,32 +225,32 @@ const EnrollmentForm = () => {
               name="nationality"
               render={({ field }) => (
                 <FormItem className="w-full">
-                  <FormLabel className="font-medium text-base">Nationality</FormLabel>
+                  <FormLabel className="font-medium text-sm sm:text-base">Nationality</FormLabel>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
-                      <SelectTrigger className="bg-gray-50 w-full h-12 text-base px-4">
-                        <SelectValue placeholder="Select nationality" className="text-base" />
+                      <SelectTrigger className="bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4">
+                        <SelectValue placeholder="Select nationality" className="text-sm sm:text-base" />
                       </SelectTrigger>
                     </FormControl>
-                    <SelectContent className="text-base">
-                      <SelectItem value="ghana" className="text-base py-3">
+                    <SelectContent className="text-sm sm:text-base">
+                      <SelectItem value="ghana" className="text-sm sm:text-base py-2 sm:py-3">
                         Ghana
                       </SelectItem>
-                      <SelectItem value="nigeria" className="text-base py-3">
+                      <SelectItem value="nigeria" className="text-sm sm:text-base py-2 sm:py-3">
                         Nigeria
                       </SelectItem>
-                      <SelectItem value="kenya" className="text-base py-3">
+                      <SelectItem value="kenya" className="text-sm sm:text-base py-2 sm:py-3">
                         Kenya
                       </SelectItem>
-                      <SelectItem value="south-africa" className="text-base py-3">
+                      <SelectItem value="south-africa" className="text-sm sm:text-base py-2 sm:py-3">
                         South Africa
                       </SelectItem>
-                      <SelectItem value="other" className="text-base py-3">
+                      <SelectItem value="other" className="text-sm sm:text-base py-2 sm:py-3">
                         Other
                       </SelectItem>
                     </SelectContent>
                   </Select>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm text-red-500" />
                 </FormItem>
               )}
             />
@@ -251,15 +261,15 @@ const EnrollmentForm = () => {
               name="streetAddress"
               render={({ field }) => (
                 <FormItem className="w-full">
-                  <FormLabel className="font-medium text-base">Street Address</FormLabel>
+                  <FormLabel className="font-medium text-sm sm:text-base">Street Address</FormLabel>
                   <FormControl>
                     <Input
                       placeholder="Enter street address"
-                      className="bg-gray-50 w-full h-12 text-base px-4"
+                      className="bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4"
                       {...field}
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm text-red-500" />
                 </FormItem>
               )}
             />
@@ -270,11 +280,15 @@ const EnrollmentForm = () => {
               name="city"
               render={({ field }) => (
                 <FormItem className="w-full">
-                  <FormLabel className="font-medium text-base">City</FormLabel>
+                  <FormLabel className="font-medium text-sm sm:text-base">City</FormLabel>
                   <FormControl>
-                    <Input placeholder="Enter city" className="bg-gray-50 w-full h-12 text-base px-4" {...field} />
+                    <Input
+                      placeholder="Enter city"
+                      className="bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4"
+                      {...field}
+                    />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm text-red-500" />
                 </FormItem>
               )}
             />
@@ -285,15 +299,15 @@ const EnrollmentForm = () => {
               name="postalCode"
               render={({ field }) => (
                 <FormItem className="w-full">
-                  <FormLabel className="font-medium text-base">Postal Code</FormLabel>
+                  <FormLabel className="font-medium text-sm sm:text-base">Postal Code</FormLabel>
                   <FormControl>
                     <Input
                       placeholder="Enter postal code"
-                      className="bg-gray-50 w-full h-12 text-base px-4"
+                      className="bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4"
                       {...field}
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm text-red-500" />
                 </FormItem>
               )}
             />
@@ -304,38 +318,40 @@ const EnrollmentForm = () => {
               name="educationLevel"
               render={({ field }) => (
                 <FormItem className="w-full">
-                  <FormLabel className="font-medium text-base">Highest Level of Education Completed</FormLabel>
+                  <FormLabel className="font-medium text-sm sm:text-base">
+                    Highest Level of Education Completed
+                  </FormLabel>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
-                      <SelectTrigger className="bg-gray-50 w-full h-12 text-base px-4">
-                        <SelectValue placeholder="Select education level" className="text-base" />
+                      <SelectTrigger className="bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4">
+                        <SelectValue placeholder="Select education level" className="text-sm sm:text-base" />
                       </SelectTrigger>
                     </FormControl>
-                    <SelectContent className="text-base">
-                      <SelectItem value="high-school" className="text-base py-3">
+                    <SelectContent className="text-sm sm:text-base">
+                      <SelectItem value="high-school" className="text-sm sm:text-base py-2 sm:py-3">
                         High School
                       </SelectItem>
-                      <SelectItem value="secondary" className="text-base py-3">
+                      <SelectItem value="secondary" className="text-sm sm:text-base py-2 sm:py-3">
                         Secondary
                       </SelectItem>
-                      <SelectItem value="diploma" className="text-base py-3">
+                      <SelectItem value="diploma" className="text-sm sm:text-base py-2 sm:py-3">
                         Diploma
                       </SelectItem>
-                      <SelectItem value="associate" className="text-base py-3">
+                      <SelectItem value="associate" className="text-sm sm:text-base py-2 sm:py-3">
                         Associate Degree
                       </SelectItem>
-                      <SelectItem value="bachelor" className="text-base py-3">
+                      <SelectItem value="bachelor" className="text-sm sm:text-base py-2 sm:py-3">
                         Bachelor&apos;s Degree
                       </SelectItem>
-                      <SelectItem value="masters" className="text-base py-3">
+                      <SelectItem value="masters" className="text-sm sm:text-base py-2 sm:py-3">
                         Master&apos;s Degree
                       </SelectItem>
-                      <SelectItem value="doctorate" className="text-base py-3">
+                      <SelectItem value="doctorate" className="text-sm sm:text-base py-2 sm:py-3">
                         Doctorate
                       </SelectItem>
                     </SelectContent>
                   </Select>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm text-red-500" />
                 </FormItem>
               )}
             />
@@ -346,29 +362,29 @@ const EnrollmentForm = () => {
               name="desiredCourse"
               render={({ field }) => (
                 <FormItem className="w-full">
-                  <FormLabel className="font-medium text-base">Desired Course</FormLabel>
+                  <FormLabel className="font-medium text-sm sm:text-base">Desired Course</FormLabel>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
-                      <SelectTrigger className="bg-gray-50 w-full h-12 text-base px-4">
-                        <SelectValue placeholder="Select desired course" className="text-base" />
+                      <SelectTrigger className="bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4">
+                        <SelectValue placeholder="Select desired course" className="text-sm sm:text-base" />
                       </SelectTrigger>
                     </FormControl>
-                    <SelectContent className="text-base">
-                      <SelectItem value="cognitive-training" className="text-base py-3">
+                    <SelectContent className="text-sm sm:text-base">
+                      <SelectItem value="cognitive-training" className="text-sm sm:text-base py-2 sm:py-3">
                         Cognitive Training
                       </SelectItem>
-                      <SelectItem value="data-science" className="text-base py-3">
+                      <SelectItem value="data-science" className="text-sm sm:text-base py-2 sm:py-3">
                         Data Science
                       </SelectItem>
-                      <SelectItem value="machine-learning" className="text-base py-3">
+                      <SelectItem value="machine-learning" className="text-sm sm:text-base py-2 sm:py-3">
                         Machine Learning
                       </SelectItem>
-                      <SelectItem value="software-development" className="text-base py-3">
+                      <SelectItem value="software-development" className="text-sm sm:text-base py-2 sm:py-3">
                         Software Development
                       </SelectItem>
                     </SelectContent>
                   </Select>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm text-red-500" />
                 </FormItem>
               )}
             />
@@ -379,46 +395,46 @@ const EnrollmentForm = () => {
               name="referralSource"
               render={({ field }) => (
                 <FormItem className="w-full">
-                  <FormLabel className="font-medium text-base">How did you hear about mindminers?</FormLabel>
+                  <FormLabel className="font-medium text-sm sm:text-base">How did you hear about mindminers?</FormLabel>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
-                      <SelectTrigger className="bg-gray-50 w-full h-12 text-base px-4">
-                        <SelectValue placeholder="Select option" className="text-base" />
+                      <SelectTrigger className="bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4">
+                        <SelectValue placeholder="Select option" className="text-sm sm:text-base" />
                       </SelectTrigger>
                     </FormControl>
-                    <SelectContent className="text-base">
-                      <SelectItem value="friend-family" className="text-base py-3">
+                    <SelectContent className="text-sm sm:text-base">
+                      <SelectItem value="friend-family" className="text-sm sm:text-base py-2 sm:py-3">
                         Friend/Family
                       </SelectItem>
-                      <SelectItem value="social-media" className="text-base py-3">
+                      <SelectItem value="social-media" className="text-sm sm:text-base py-2 sm:py-3">
                         Social Media
                       </SelectItem>
-                      <SelectItem value="search-engine" className="text-base py-3">
+                      <SelectItem value="search-engine" className="text-sm sm:text-base py-2 sm:py-3">
                         Search Engine
                       </SelectItem>
-                      <SelectItem value="advertisement" className="text-base py-3">
+                      <SelectItem value="advertisement" className="text-sm sm:text-base py-2 sm:py-3">
                         Advertisement
                       </SelectItem>
-                      <SelectItem value="other" className="text-base py-3">
+                      <SelectItem value="other" className="text-sm sm:text-base py-2 sm:py-3">
                         Other
                       </SelectItem>
                     </SelectContent>
                   </Select>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm text-red-500" />
                 </FormItem>
               )}
             />
           </div>
 
           {/* Security Check */}
-          <div className="mx-auto md:w-3/5 pt-6">
-            <div className="flex flex-col md:flex-row md:w-full mx-auto md:items-end md:justify-between md:space-x-4">
-              <div className="mb-4 md:mb-0">
-                <p className="text-sm text-gray-500 mb-2">Security check</p>
+          <div className="mx-auto w-full md:w-4/5 lg:w-3/5 pt-4 sm:pt-6">
+            <div className="flex flex-col sm:flex-row w-full items-start sm:items-end justify-between sm:space-x-4">
+              <div className="mb-4 sm:mb-0 w-full sm:w-auto">
+                <p className="text-xs sm:text-sm text-gray-500 mb-2">Security check</p>
                 <div className="flex items-center space-x-2">
-                  <div className="relative bg-green rounded-md text-sm">
+                  <div className="relative rounded-md text-sm">
                     <div className={`absolute rounded-md bg-[#FEDE70] w-full h-full top-1 right-1 z-0`}></div>
-                    <div className="relative border-2 bg-[#F9F6EF] border-black rounded-md px-3 py-2 text-sm">
+                    <div className="relative border-2 bg-[#F9F6EF] border-black rounded-md px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm">
                       <span className="relative z-10 bg-[#F9F6EF]">What is 2 + 4?</span>
                     </div>
                   </div>
@@ -430,20 +446,30 @@ const EnrollmentForm = () => {
                     render={({ field }) => (
                       <FormItem className="flex-1">
                         <FormControl>
-                          <Input placeholder="" className="w-20 h-12 bg-gray-50 text-base px-4" {...field} />
+                          <Input
+                            placeholder=""
+                            className="w-16 sm:w-20 h-10 sm:h-12 bg-[#F5F5F5] border-0 text-sm sm:text-base px-3 sm:px-4"
+                            {...field}
+                          />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="text-xs sm:text-sm text-red-500" />
                       </FormItem>
                     )}
                   />
                 </div>
               </div>
 
-              <div className="flex justify-end">
-                <Button type="submit" className="bg-blue-600 hover:bg-blue-600/90 text-white px-8 py-6 h-12 text-base">
+              <div className="w-full sm:w-auto mt-4 sm:mt-0">
+                <CustomButton
+                  variant="primary"
+                  size="md"
+                  withIcon={true}
+                  endIcon={<ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />}
+                  className="w-full sm:w-auto text-sm sm:text-base py-2 sm:py-3 px-4 sm:px-6 h-auto"
+                  type="submit"
+                >
                   Submit Your Application
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                </CustomButton>
               </div>
             </div>
           </div>

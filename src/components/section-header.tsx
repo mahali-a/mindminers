@@ -20,10 +20,10 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
   maxWidth = 'max-w-xl',
 }) => {
   return (
-    <div className={`relative ${maxWidth} mx-auto my-4 sm:my-6 md:my-8 px-2 sm:px-0`}>
+    <div className={`relative ${maxWidth} mx-auto my-4 sm:my-6 md:my-8  sm:px-0`}>
       {/* Background shadow */}
       <div
-        className={`absolute ${backgroundColor} rounded-xl sm:rounded-2xl w-full h-full top-2 sm:top-3 right-2 sm:right-3 z-0`}
+        className={`absolute ${backgroundColor} rounded-xl sm:rounded-2xl w-full h-full top-1 sm:top-2 right-2 sm:right-2 z-0`}
       ></div>
 
       {/* Main white button with black border */}

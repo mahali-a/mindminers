@@ -4,7 +4,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
-import { Button } from '@/components/ui/button';
+import { CustomButton } from '@/components/common';
 import { SectionHeader } from './section-header';
 
 const AboutSection = () => {
@@ -35,10 +35,15 @@ const AboutSection = () => {
               reaches their fullest potential.
             </p>
 
-            <Button className="bg-[#0057FF]  hover:bg-[#0057FF]/90  text-white px-6 sm:px-8 py-3 sm:py-4 h-auto text-base rounded-md w-full sm:w-auto">
+            <CustomButton
+              variant="primary"
+              size="md"
+              withIcon={true}
+              endIcon={<ArrowRight className="w-4 h-4 md:w-5 md:h-5" />}
+              className="w-full sm:w-auto text-sm md:text-base py-2 md:py-3 px-4 md:px-6 h-auto"
+            >
               Learn more
-              <ArrowRight className="w-4 h-4" />
-            </Button>
+            </CustomButton>
           </div>
 
           <div className="relative h-[250px] sm:h-[300px] md:h-[400px] rounded-xl sm:rounded-3xl overflow-hidden border-2 border-white shadow-[-5px_5px_0px_0px_#FEDE70] sm:shadow-[-10px_10px_0px_0px_#FEDE70] order-1 md:order-2 mb-6 md:mb-0">
