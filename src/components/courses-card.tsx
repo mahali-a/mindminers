@@ -52,7 +52,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ imageSrc, title, description })
         <p className="text-gray-600 text-sm sm:text-sm mb-4 sm:mb-4 flex-grow line-clamp-3">{description}</p>
 
         <div className="w-full flex justify-start">
-          <CustomButton variant="cta" size="md" onClick={handleEnrollClick}>
+          <CustomButton variant="cta" size="md" onClick={handleEnrollClick} className="cursor-pointer">
             Enroll Now
           </CustomButton>
         </div>

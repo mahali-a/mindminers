@@ -3,7 +3,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useState } from 'react';
 
-import { CustomButton } from '@/components/common';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import CourseCard from './courses-card';
 import { SectionHeader } from './section-header';
@@ -200,7 +199,7 @@ const CoursesSection = () => {
         </div>
       </Tabs>
 
-      <div className="text-center mt-5 md:mt-15">
+      {/* <div className="text-center mt-5 md:mt-15">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -217,7 +216,7 @@ const CoursesSection = () => {
             View all courses
           </CustomButton>
         </motion.div>
-      </div>
+      </div> */}
     </section>
   );
 };

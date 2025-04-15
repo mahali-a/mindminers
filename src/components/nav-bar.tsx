@@ -42,7 +42,7 @@ const Navbar = () => {
             >
               About Us
             </Link>
-            <Link
+            {/* <Link
               href="/training"
               className={`text-gray-700 hover:text-gray-900 text-sm sm:text-base font-medium transition-colors ${
                 pathname === '/training' ? 'text-brand-blue border-b-2 border-brand-blue' : ''
@@ -57,9 +57,9 @@ const Navbar = () => {
               }`}
             >
               FAQs
-            </Link>
+            </Link> */}
             <Link
-              href="/partner"
+              href="mailto:info@mindminers.com"
               className={`text-gray-700 hover:text-gray-900 text-sm sm:text-base font-medium transition-colors ${
                 pathname === '/partner' ? 'text-brand-blue border-b-2 border-brand-blue' : ''
               }`}
@@ -69,14 +69,14 @@ const Navbar = () => {
           </nav>
 
           <div className="flex items-center space-x-4 ml-6">
-            <Link
+            {/* <Link
               href="/contact"
               className={`hidden sm:inline-flex font-semibold text-[#0056D2] border-[#0056D2] items-center border-2 justify-center rounded-md text-sm sm:text-base text-brand-blue h-10 px-4 sm:px-6 py-2 transition-colors hover:bg-brand-blue/5 ${
                 pathname === '/contact' ? 'bg-brand-blue/10 font-bold' : ''
               }`}
             >
               Contact Us
-            </Link>
+            </Link> */}
             <Link
               href="/enroll"
               className={`inline-flex font-medium sm:font-semibold bg-[#0056D2] text-xs sm:text-sm items-center justify-center rounded-md md:text-base bg-brand-blue text-[#FEDE70] h-10 px-2 sm:px-6 sm:py-2 transition-colors hover:bg-brand-blue/90 ${
@@ -152,7 +152,7 @@ const Navbar = () => {
               FAQs
             </Link>
             <Link
-              href="/partner"
+              href="mailto:info@mindminers.com"
               className={`block text-gray-700 hover:text-gray-900 text-sm font-medium transition-colors py-2 ${
                 pathname === '/partner' ? 'text-brand-blue font-bold' : ''
               }`}

@@ -43,6 +43,7 @@ const CorporateSection = () => {
                   withIcon={true}
                   endIcon={<ArrowRight className="w-4 h-4 md:w-5 md:h-5" />}
                   className="w-full sm:w-auto text-sm md:text-base py-2 md:py-3 px-4 md:px-6 h-auto"
+                  href="mailto:info@mindminers.com"
                 >
                   Book a session
                 </CustomButton>
