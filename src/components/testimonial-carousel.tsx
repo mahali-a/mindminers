@@ -163,7 +163,7 @@ const TestimonialCarousel = () => {
       <h2 className="text-3xl font-medium text-center text-gray-800 mb-16">Hear from our success stories</h2>
 
       {/* Testimonial Carousel */}
-      <div className="w-[1600px]  mx-auto relative">
+      <div className="w-[1600px] md:ml-[-100px] lg:!ml-[0px] mx-auto relative">
         <div className="flex items-center justify-center">
           {/* Left navigation button */}
           <button
@@ -300,7 +300,7 @@ const TestimonialCarousel = () => {
               {index === activeIndex && !isPaused && (
                 <motion.div
                   className="absolute inset-0 bg-black rounded-full"
-                  initial={{ width: '0%' }}
+                  initial={{ width: '100%' }}
                   animate={{ width: '100%' }}
                   transition={{ duration: 5, ease: 'linear' }}
                   style={{ transformOrigin: 'left' }}
@@ -309,10 +309,10 @@ const TestimonialCarousel = () => {
               )}
 
               {/* Static active indicator when paused */}
-              {index === activeIndex && isPaused && <div className="absolute inset-0 bg-black rounded-full" />}
+              {/* {index === activeIndex && isPaused && <div className="absolute inset-0 bg-black rounded-full" />} */}
 
               {/* Elongated active indicator */}
-              {index === activeIndex && <div className="absolute inset-0 w-8 h-2 -ml-3 bg-black rounded-full" />}
+              {/* {index === activeIndex && <div className="absolute inset-0 w-8 h-2 -ml-3 bg-black rounded-full" />} */}
             </button>
           ))}
         </div>
