@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const JoinTeam = () => {
   return (
@@ -15,9 +15,12 @@ const JoinTeam = () => {
           </div>
 
           <div className="flex justify-center md:justify-end">
-            <Button className="bg-white text-[#0056D2] hover:bg-gray-100 text-lg px-8 py-4 border-2 border-[#F480D5] rounded-full h-auto">
+            <Link
+              href="mailto:info@mindminers.com"
+              className="bg-white text-[#0056D2] hover:bg-gray-100 text-lg px-8 py-4 border-2 border-[#F480D5] rounded-full h-auto"
+            >
               Join the team
-            </Button>
+            </Link>
           </div>
         </div>
       </div>
