@@ -133,13 +133,14 @@ const EnrollmentForm = () => {
                         </Button>
                       </FormControl>
                     </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0" align="start">
+                    <PopoverContent className="w-auto p-0 bg-white z-50 border shadow-md" align="start">
                       <Calendar
                         mode="single"
                         selected={field.value}
                         onSelect={field.onChange}
                         initialFocus
                         disabled={(date) => date > new Date()}
+                        className="bg-white"
                       />
                     </PopoverContent>
                   </Popover>
@@ -161,7 +162,7 @@ const EnrollmentForm = () => {
                         <SelectValue placeholder="Select gender" className="text-sm sm:text-base" />
                       </SelectTrigger>
                     </FormControl>
-                    <SelectContent className="text-sm sm:text-base">
+                    <SelectContent className="text-sm sm:text-base bg-white z-50">
                       <SelectItem value="male" className="text-sm sm:text-base py-2 sm:py-3">
                         Male
                       </SelectItem>
@@ -232,7 +233,7 @@ const EnrollmentForm = () => {
                         <SelectValue placeholder="Select nationality" className="text-sm sm:text-base" />
                       </SelectTrigger>
                     </FormControl>
-                    <SelectContent className="text-sm sm:text-base">
+                    <SelectContent className="text-sm sm:text-base bg-white z-50">
                       <SelectItem value="ghana" className="text-sm sm:text-base py-2 sm:py-3">
                         Ghana
                       </SelectItem>
@@ -327,7 +328,7 @@ const EnrollmentForm = () => {
                         <SelectValue placeholder="Select education level" className="text-sm sm:text-base" />
                       </SelectTrigger>
                     </FormControl>
-                    <SelectContent className="text-sm sm:text-base">
+                    <SelectContent className="text-sm sm:text-base bg-white z-50">
                       <SelectItem value="high-school" className="text-sm sm:text-base py-2 sm:py-3">
                         High School
                       </SelectItem>
@@ -369,7 +370,7 @@ const EnrollmentForm = () => {
                         <SelectValue placeholder="Select desired course" className="text-sm sm:text-base" />
                       </SelectTrigger>
                     </FormControl>
-                    <SelectContent className="text-sm sm:text-base">
+                    <SelectContent className="text-sm sm:text-base bg-white z-50">
                       <SelectItem value="cognitive-training" className="text-sm sm:text-base py-2 sm:py-3">
                         Cognitive Training
                       </SelectItem>
@@ -402,7 +403,7 @@ const EnrollmentForm = () => {
                         <SelectValue placeholder="Select option" className="text-sm sm:text-base" />
                       </SelectTrigger>
                     </FormControl>
-                    <SelectContent className="text-sm sm:text-base">
+                    <SelectContent className="text-sm sm:text-base bg-white z-50">
                       <SelectItem value="friend-family" className="text-sm sm:text-base py-2 sm:py-3">
                         Friend/Family
                       </SelectItem>
