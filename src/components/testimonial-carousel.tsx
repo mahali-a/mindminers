@@ -144,7 +144,7 @@ const TestimonialCarousel = () => {
 
   return (
     <section
-      className="py-16 px-4 my-20 overflow-x-hidden"
+      className="py-16 px-4 my-20 overflow-x-hidden mx-auto"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -163,7 +163,7 @@ const TestimonialCarousel = () => {
       <h2 className="text-3xl font-medium text-center text-gray-800 mb-16">Hear from our success stories</h2>
 
       {/* Testimonial Carousel */}
-      <div className="w-[1600px] ml-[-100px] mx-auto relative">
+      <div className="w-[1600px]  mx-auto relative">
         <div className="flex items-center justify-center">
           {/* Left navigation button */}
           <button
