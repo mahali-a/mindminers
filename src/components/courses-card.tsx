@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation';
 import { CustomButton } from '@/components/common';
 
 interface CourseCardProps {
+  id: string;
   imageSrc: string;
   title: string;
   description: string;
@@ -11,13 +12,14 @@ interface CourseCardProps {
   reviewCount: number;
   price: number;
   discountedPrice?: number;
+  enrollmentsCount?: number;
 }
 
-const CourseCard: React.FC<CourseCardProps> = ({ imageSrc, title, description }) => {
+const CourseCard: React.FC<CourseCardProps> = ({ id, imageSrc, title, description, enrollmentsCount = 0 }) => {
   const router = useRouter();
 
   const handleEnrollClick = () => {
-    router.push('/course-details');
+    router.push(`/course-details/${id}`);
   };
 
   return (
@@ -42,7 +44,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ imageSrc, title, description })
             </div>
           </div>
           <div className="ml-2 sm:ml-2 text-gray-600 font-medium text-xs sm:text-sm whitespace-nowrap">
-            + 40 students
+            + {enrollmentsCount} students
           </div>
         </div>
       </div>
