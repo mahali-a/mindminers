@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function EnrollPage({ searchParams }: { searchParams?: { courseId?: string } }) {
   console.log('🚀 ~ EnrollPage ~ searchParams:', searchParams);
-  // const courseId = searchParams?.courseId || '';
+  const courseId = searchParams?.courseId || '';
 
-  return <Enroll />;
+  return <Enroll initialCourseId={courseId} />;
 }

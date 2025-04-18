@@ -298,8 +298,7 @@ const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ initialCourseId = '' })
                           variant={'outline'}
                           className={cn(
                             'w-full h-10 sm:h-12 pl-3 sm:pl-4 text-left font-normal bg-[#F5F5F5] border-0 text-sm sm:text-base',
-                            !field.value && 'text-muted-foreground',
-                            field.value && 'border-l-4 border-l-blue-600 pl-4 sm:pl-5 font-medium bg-blue-50'
+                            !field.value && 'text-muted-foreground'
                           )}
                         >
                           {field.value ? format(field.value, 'MM/dd/yyyy') : <span>mm/dd/yy</span>}
@@ -334,8 +333,7 @@ const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ initialCourseId = '' })
                     <FormControl>
                       <SelectTrigger
                         className={cn(
-                          'bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4',
-                          field.value && 'border-l-4 border-l-blue-600 pl-4 sm:pl-5 font-medium bg-blue-50'
+                          'bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-6'
                         )}
                       >
                         <SelectValue placeholder="Select gender" className="text-sm sm:text-base" />
@@ -422,8 +420,7 @@ const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ initialCourseId = '' })
                     <FormControl>
                       <SelectTrigger
                         className={cn(
-                          'bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4',
-                          field.value && 'border-l-4 border-l-blue-600 pl-4 sm:pl-5 font-medium bg-blue-50'
+                          'bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-6'
                         )}
                       >
                         <SelectValue placeholder="Select nationality" className="text-sm sm:text-base" />
@@ -528,8 +525,7 @@ const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ initialCourseId = '' })
                     <FormControl>
                       <SelectTrigger
                         className={cn(
-                          'bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4',
-                          field.value && 'border-l-4 border-l-blue-600 pl-4 sm:pl-5 font-medium bg-blue-50'
+                          'bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-6'
                         )}
                       >
                         <SelectValue placeholder="Select education level" className="text-sm sm:text-base" />
@@ -590,8 +586,7 @@ const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ initialCourseId = '' })
                     <FormControl>
                       <SelectTrigger
                         className={cn(
-                          'bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4',
-                          field.value && 'border-l-4 border-l-blue-600 pl-4 sm:pl-5 font-medium bg-blue-50'
+                          'bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-6'
                         )}
                       >
                         <SelectValue placeholder="Select a course" className="text-sm sm:text-base" />
@@ -639,8 +634,7 @@ const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ initialCourseId = '' })
                     <FormControl>
                       <SelectTrigger
                         className={cn(
-                          'bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4',
-                          field.value && 'border-l-4 border-l-blue-600 pl-4 sm:pl-5 font-medium bg-blue-50'
+                          'bg-[#F5F5F5] border-0 w-full h-10 sm:h-12 text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-6'
                         )}
                       >
                         <SelectValue placeholder="Select referral source" className="text-sm sm:text-base" />
