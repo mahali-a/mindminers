@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation';
 import { CustomButton } from '@/components/common';
 
 interface CourseCardProps {
+  id: string;
   imageSrc: string;
   title: string;
   description: string;
@@ -13,11 +14,11 @@ interface CourseCardProps {
   discountedPrice?: number;
 }
 
-const CourseCard: React.FC<CourseCardProps> = ({ imageSrc, title, description }) => {
+const CourseCard: React.FC<CourseCardProps> = ({ id, imageSrc, title, description }) => {
   const router = useRouter();
 
   const handleEnrollClick = () => {
-    router.push('/course-details');
+    router.push(`/course-details/${id}`);
   };
 
   return (

@@ -4,10 +4,43 @@ import React, { useEffect } from 'react';
 
 import CourseCard from '@/components/courses-card';
 import Footer from '@/components/footer';
-import CourseHeroSection from '../courses/components/course-hero-section';
-import CourseInfoSection from '../courses/components/course-info';
+import CourseHeroSection from '@/features/course-details/components/course-hero-section';
+import CourseInfoSection from '@/features/course-details/components/course-info';
 
-const courseData = [
+// Types for our course data
+interface CourseData {
+  id: string;
+  title: string;
+  numberOfStudents?: number;
+  enrollmentsCount?: number;
+  featuredImage?: {
+    id: string;
+    url: string;
+  } | null;
+  requirements?: {
+    document: any;
+  };
+  whatYouWillLearn?: {
+    document: any;
+  };
+  targetAudience?: {
+    document: any;
+  };
+  learningTechniques?: {
+    document: any;
+  };
+  category?: {
+    id: string;
+    name: string;
+  };
+}
+
+interface CourseDetailProps {
+  initialCourseData: CourseData;
+}
+
+// Related course data for recommendations
+const relatedCoursesData = [
   {
     id: 1,
     imageSrc: '/images/course-1.png',
@@ -24,7 +57,7 @@ const courseData = [
   {
     id: 2,
     imageSrc: '/images/course-2.png',
-    title: 'Overcome Math Anxiety and Master the Basics',
+    title: 'Cognitive Training for Mental Agility',
     description: 'Break through mental blocks and develop solid foundations in mental arithmetic and problem-solving.',
     category: 'Math',
     rating: 4.8,
@@ -35,9 +68,9 @@ const courseData = [
   {
     id: 3,
     imageSrc: '/images/course-3.png',
-    title: 'Overcome Math Anxiety and Master the Basics',
+    title: 'Reading Comprehension Mastery',
     description:
-      'Transform math anxiety into math confidence with our specialized cognitive approach to mathematical learning.',
+      'Transform reading anxiety into reading confidence with our specialized cognitive approach to comprehension.',
     category: 'Math',
     rating: 4.7,
     reviewCount: 87,
@@ -47,9 +80,9 @@ const courseData = [
   {
     id: 4,
     imageSrc: '/images/course-4.png',
-    title: 'Overcome Math Anxiety and Master the Basics',
+    title: 'Essential Life Skills',
     description:
-      'Master the fundamentals of mathematics through our unique cognitive training approach designed to reduce anxiety.',
+      'Master the fundamentals of life skills through our unique cognitive training approach designed to reduce anxiety.',
     category: 'Math',
     rating: 4.9,
     reviewCount: 112,
@@ -59,7 +92,15 @@ const courseData = [
   },
 ];
 
-const CourseDetail = () => {
+const CourseDetail: React.FC<CourseDetailProps> = ({ initialCourseData }) => {
+  // const params = useParams();
+
+  // Log the initial course data
+  useEffect(() => {
+    console.log('Initial course data from server:', initialCourseData);
+    console.log('Course title from server:', initialCourseData?.title);
+  }, [initialCourseData]);
+
   // Add a smooth scroll effect when the page loads
   useEffect(() => {
     window.scrollTo({
@@ -71,15 +112,16 @@ const CourseDetail = () => {
   return (
     <div className="min-h-screen bg-white">
       <main>
-        <CourseHeroSection />
-        <CourseInfoSection />
+        <CourseHeroSection course={initialCourseData} />
+        <CourseInfoSection course={initialCourseData} />
 
         <section className="max-w-7xl mx-auto px-4 py-10">
           <h2 className="text-3xl font-bold mb-8">Explore more courses</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 min-h-[400px]">
-            {courseData.map((course) => (
+            {relatedCoursesData.map((course) => (
               <CourseCard
                 key={course.id}
+                id={String(course.id)}
                 imageSrc={course.imageSrc}
                 title={course.title}
                 description={course.description}

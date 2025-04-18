@@ -4,6 +4,8 @@ import './globals.css';
 
 import { Lato } from 'next/font/google';
 
+import { ApolloWrapper } from '@/lib/apollo-provider';
+
 // const inter = Inter({ subsets: ['latin'] });
 const lato = Lato({
   subsets: ['latin'],
@@ -19,7 +21,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${lato.className}`}>
-      <body>{children}</body>
+      <body>
+        <ApolloWrapper>{children}</ApolloWrapper>
+      </body>
     </html>
   );
 }
