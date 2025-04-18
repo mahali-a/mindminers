@@ -133,24 +133,7 @@ const Navbar = () => {
             >
               About Us
             </Link>
-            <Link
-              href="/training"
-              className={`block text-gray-700 hover:text-gray-900 text-sm font-medium transition-colors py-2 ${
-                pathname === '/training' ? 'text-brand-blue font-bold' : ''
-              }`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Training
-            </Link>
-            <Link
-              href="/faqs"
-              className={`block text-gray-700 hover:text-gray-900 text-sm font-medium transition-colors py-2 ${
-                pathname === '/faqs' ? 'text-brand-blue font-bold' : ''
-              }`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              FAQs
-            </Link>
+
             <Link
               href="mailto:info@mindminers.com"
               className={`block text-gray-700 hover:text-gray-900 text-sm font-medium transition-colors py-2 ${
@@ -161,7 +144,7 @@ const Navbar = () => {
               Our Partner
             </Link>
             <Link
-              href="/contact"
+              href="mailto:info@mindminers.com"
               className={`block text-gray-700 hover:text-gray-900 text-sm font-medium transition-colors py-2 ${
                 pathname === '/contact' ? 'text-brand-blue font-bold' : ''
               }`}
