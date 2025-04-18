@@ -12,9 +12,10 @@ interface CourseCardProps {
   reviewCount: number;
   price: number;
   discountedPrice?: number;
+  enrollmentsCount?: number;
 }
 
-const CourseCard: React.FC<CourseCardProps> = ({ id, imageSrc, title, description }) => {
+const CourseCard: React.FC<CourseCardProps> = ({ id, imageSrc, title, description, enrollmentsCount = 0 }) => {
   const router = useRouter();
 
   const handleEnrollClick = () => {
@@ -43,7 +44,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ id, imageSrc, title, descriptio
             </div>
           </div>
           <div className="ml-2 sm:ml-2 text-gray-600 font-medium text-xs sm:text-sm whitespace-nowrap">
-            + 40 students
+            + {enrollmentsCount} students
           </div>
         </div>
       </div>

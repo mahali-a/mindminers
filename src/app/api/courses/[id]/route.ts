@@ -51,7 +51,7 @@ const COURSE_BY_ID_QUERY = gql`
   }
 `;
 
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(request: NextRequest, { params }: any) {
   const courseId = params.id;
 
   if (!courseId) {

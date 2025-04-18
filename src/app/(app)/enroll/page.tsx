@@ -7,8 +7,7 @@ export const metadata: Metadata = {
   description: 'Enroll in our specialized cognitive learning courses',
 };
 
-export default function EnrollPage({ searchParams }: { searchParams?: { courseId?: string } }) {
-  console.log('🚀 ~ EnrollPage ~ searchParams:', searchParams);
+export default function EnrollPage({ searchParams }: any) {
   const courseId = searchParams?.courseId || '';
 
   return <Enroll initialCourseId={courseId} />;

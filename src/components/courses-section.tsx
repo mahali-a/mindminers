@@ -287,7 +287,7 @@ const CoursesSection = () => {
                     layoutId={`course-${course.id}`}
                   >
                     <CourseCard
-                      id={course.id}
+                      id={course.id.toString()}
                       imageSrc={course.imageSrc}
                       title={course.title}
                       description={course.description}

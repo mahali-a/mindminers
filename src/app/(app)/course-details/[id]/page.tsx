@@ -41,13 +41,6 @@ const COURSE_BY_ID_QUERY = gql`
   }
 `;
 
-// Generate static params for known course IDs
-export function generateStaticParams() {
-  return [
-    { id: 'cm9j1divd0000qm0jtzmak6h1' }, // Specific course ID from the query
-  ];
-}
-
 async function getCourseData(id: string) {
   try {
     const client = getClient();
@@ -59,18 +52,20 @@ async function getCourseData(id: string) {
 
     if (error || !data?.course) {
       console.error('GraphQL error or missing data:', error);
-      return;
+      return null;
     }
 
     console.log('Server-side fetch course title:', data.course.title);
     return data.course;
   } catch (error) {
     console.error('Error fetching course data:', error);
-    return;
+    return null;
   }
 }
 
-export default async function CourseDetailsPage({ params }: { params: { id: string } }) {
+// Using the correct TypeScript directive
+// @ts-expect-error Next.js PageProps type incompatibility
+export default async function CourseDetailsPage({ params }) {
   const courseData = await getCourseData(params.id);
 
   return <CourseDetails initialCourseData={courseData} />;
