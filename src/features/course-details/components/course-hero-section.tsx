@@ -41,7 +41,7 @@ const CourseHeroSection: React.FC<CourseProps> = ({ course }) => {
               </div>
               <div className="flex flex-col">
                 <span className="text-xs sm:text-sm text-gray-500">Taught by</span>
-                <span className="font-medium text-sm sm:text-base">Mind Miners</span>
+                <span className="font-medium text-sm sm:text-base">MindMiners</span>
               </div>
               <div className="flex items-center gap-1 ml-2 sm:ml-4">
                 <div className="flex -space-x-1 sm:-space-x-2">
