@@ -226,7 +226,7 @@ const Hero = () => {
 
         {/* Decorative elements - hidden on mobile */}
         <motion.div
-          className="sm:block hidden absolute top-50 left-60 w-12 sm:w-30 h-12 sm:h-30"
+          className="lg:block hidden absolute top-50 left-60 w-12 sm:w-30 h-12 sm:h-30"
           variants={decorationVariants}
           initial="hidden"
           animate="visible"
@@ -235,7 +235,7 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          className="sm:block absolute hidden top-50 right-60 w-12 sm:w-30 h-12 sm:h-30"
+          className="lg:block absolute hidden top-50 right-60 w-12 sm:w-30 h-12 sm:h-30"
           variants={decorationVariantsReverse}
           initial="hidden"
           animate="visible"

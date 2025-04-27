@@ -23,25 +23,28 @@ const Footer = () => {
             <h3 className="font-medium text-gray-900 mb-4">Explore</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/" className=" hover:text-brand-blue text-sm transition-colors">
+                <Link href="/about" className=" hover:text-brand-blue text-sm transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/" className=" hover:text-brand-blue text-sm transition-colors">
+                <Link
+                  href="https://calendly.com/mindminerstech/30min"
+                  className=" hover:text-brand-blue text-sm transition-colors"
+                >
                   Become a Tutor
                 </Link>
               </li>
               <li>
-                <Link href="/" className=" hover:text-brand-blue text-sm transition-colors">
+                <Link href="/courses" className=" hover:text-brand-blue text-sm transition-colors">
                   Courses
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/" className=" hover:text-brand-blue text-sm transition-colors">
                   Training
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div>
