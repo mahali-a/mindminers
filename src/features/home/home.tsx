@@ -4,7 +4,6 @@ import { motion, useInView } from 'framer-motion';
 import React, { useRef } from 'react';
 
 import AboutSection from '@/components/about-section';
-import { CustomButton } from '@/components/common/CustomButton';
 import CorporateSection from '@/components/corporate-section';
 import CoursesSection from '@/components/courses-section';
 import FaqSection from '@/components/faq-section';
@@ -58,7 +57,7 @@ export default function Home() {
           <CoursesSection />
           <div className="text-center mt-5 md:mt-15">
             <motion.div variants={fadeInUpVariants}>
-              <CustomButton
+              {/* <CustomButton
                 variant="outline"
                 size="md"
                 withIcon={true}
@@ -67,7 +66,7 @@ export default function Home() {
                 href="/courses"
               >
                 View all courses
-              </CustomButton>
+              </CustomButton> */}
             </motion.div>
           </div>
         </motion.div>

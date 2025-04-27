@@ -64,7 +64,7 @@ const Navbar = () => {
                 pathname === '/partner' ? 'text-brand-blue border-b-2 border-brand-blue' : ''
               }`}
             >
-              Our Partner
+              Our Partners
             </Link>
           </nav>
 
@@ -141,7 +141,7 @@ const Navbar = () => {
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Our Partner
+              Our Partners
             </Link>
             <Link
               href="mailto:info@mindminers.com"

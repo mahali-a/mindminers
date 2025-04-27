@@ -11,27 +11,27 @@ const faqs = [
   {
     question: 'What is Mind Miners, and how does it work?',
     answer:
-      'Mind Miners is an educational platform that combines cognitive science with specialized learning techniques to help students overcome learning barriers, particularly in mathematics. Our approach focuses on addressing underlying cognitive patterns that cause anxiety and learning blocks, rather than just teaching content.',
+      'Mind Miners is a brain enhancement program that combines cognitive science with specialized learning techniques to help an individual overcome learning barriers, memory retention challenges and congnitive challenges. Our approach focuses on addressing underlying cognitive patterns that cause anxiety and learning blocks, rather than just teaching content',
   },
   {
-    question: 'Who can benefit from the Mind Aid for Mathematics course?',
+    question: 'Who can benefit from MindMiners?',
     answer:
-      'Our courses are designed for learners of all ages who experience math anxiety or learning difficulties. We have specialized programs for children (8-12), teenagers, and adults, each tailored to address age-appropriate challenges and learning styles.',
+      'Ourprograms are designed for learners of all ages who experience memory loss, weak focus and learning difficulties. We have specialized programs for children, teenagers, adults educational facilities and corporate entities; each tailored to address age-appropriate challenges and learning styles.',
   },
   {
     question: 'Are the courses available online or in-person?',
     answer:
-      'We offer both online and in-person options for most of our courses. Our online platform provides interactive lessons, personalized feedback, and virtual coaching sessions. In-person classes are available in select locations with certified Mind Miners instructors.',
+      'We offer a rich blend of both online and in-person options for most of our courses. Our online platform provides interactive lessons, personalized feedback, and virtual coaching sessions. In-person classes are available in select locations administered by certified MindMiners instructors.',
   },
   {
     question: 'How can I enroll in a course or corporate training session?',
     answer:
-      'Enrollment is simple through our website. Choose your desired course, select online or in-person format, and complete the registration process. For corporate training, click on &apos;Book a Demo&apos; to schedule a consultation with our corporate solutions team.',
+      'Enrollment is simple through our website. Choose your desired course, select online or in-person format, and complete the registration process. For corporate training, click on Book a Demo to schedule a consultation with our corporate solutions team.',
   },
   {
-    question: 'What makes Mind Miners different from other learning platforms?',
+    question: 'What makes MindMiners different from other learning platforms?',
     answer:
-      'Unlike traditional educational platforms that focus primarily on content delivery, Mind Miners addresses the cognitive and emotional aspects of learning. Our methodology is based on neuroscience research and designed to rewire negative thought patterns, reduce anxiety, and build lasting confidence in learning.',
+      'Unlike traditional educational platforms that focus primarily on content delivery. MindMiners addresses the cognitive and emotional aspects of learning. Our methodology is based on neuroscience research and designed to rewire negative thought patterns, reduce anxiety, and build lasting confidence in learning.',
   },
   {
     question: 'Can I get personalized training for my team or organization?',
