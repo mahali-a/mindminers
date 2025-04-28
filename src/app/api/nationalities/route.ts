@@ -1,34 +1,25 @@
+import { getCodes, getNames } from 'country-list';
 import { NextResponse } from 'next/server';
-
-// Hardcoded nationality data as requested
-const NATIONALITIES = [
-  {
-    id: 'ghana',
-    name: 'Ghana',
-  },
-  {
-    id: 'nigeria',
-    name: 'Nigeria',
-  },
-  {
-    id: 'cote-divoire',
-    name: "Côte d'Ivoire",
-  },
-  {
-    id: 'togo',
-    name: 'Togo',
-  },
-];
 
 export async function GET() {
   try {
-    // Log the response for debugging
-    console.log('Server-side nationalities data: returning', NATIONALITIES.length, 'nationalities');
+    // Get country names and codes from country-list library
+    const countryNames = getNames() as string[];
+    const countryCodes = getCodes() as string[];
 
-    // Return the hardcoded data
+    // Transform into the expected format
+    const nationalities = countryNames.map((name: string, index: number) => ({
+      id: countryCodes[index]?.toLowerCase() || `country-${index}`,
+      name,
+    }));
+
+    // Log the response for debugging
+    console.log('Server-side nationalities data: returning', nationalities.length, 'nationalities');
+
+    // Return the country data
     return NextResponse.json({
       data: {
-        nationalities: NATIONALITIES,
+        nationalities,
       },
     });
   } catch (error) {

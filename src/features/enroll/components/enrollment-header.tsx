@@ -58,8 +58,7 @@ const EnrollmentHeader = () => {
         </motion.h1>
 
         <motion.p className="text-lg text-center mx-auto text-gray-600 w-5/6" variants={itemVariants}>
-          Fill out the form below to secure your spot and take the first step towards a brighter future with Mind
-          Miners.
+          Fill out the form below to secure your spot and take the first step towards a brighter future with MindMiners.
         </motion.p>
 
         <motion.div className="flex items-center justify-center gap-3" variants={itemVariants}>

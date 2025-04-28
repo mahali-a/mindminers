@@ -59,6 +59,9 @@ importers:
       clsx:
         specifier: 2.1.1
         version: 2.1.1
+      country-list:
+        specifier: 2.3.0
+        version: 2.3.0
       date-fns:
         specifier: 4.1.0
         version: 4.1.0
@@ -120,6 +123,9 @@ importers:
       '@ianvs/prettier-plugin-sort-imports':
         specifier: 4.4.1
         version: 4.4.1(prettier@3.5.3)
+      '@types/country-list':
+        specifier: 2.1.4
+        version: 2.1.4
       '@types/node':
         specifier: 22.13.13
         version: 22.13.13
@@ -1233,6 +1239,9 @@ packages:
   '@types/conventional-commits-parser@5.0.0':
     resolution: {integrity: sha512-loB369iXNmAZglwWATL+WRe+CRMmmBPtpolYzIebFaX4YA3x+BEfLqhUAV9WanycKI3TG1IMr5bMJDajDKLlUQ==}
 
+  '@types/country-list@2.1.4':
+    resolution: {integrity: sha512-c4orjm0wT+BRt6Ynf2/QRRL+iMX4SdLT11jAjKqkJ7mQr/DLOmdz7qR8i04j9Y7wFSoP70cXJc18FN4YGNgGaA==}
+
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
@@ -1624,6 +1633,9 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
+
+  country-list@2.3.0:
+    resolution: {integrity: sha512-qZk66RlmQm7fQjMYWku1AyjlKPogjPEorAZJG88owPExoPV8EsyCcuFLvO2afTXHEhi9liVOoyd+5A6ZS5QwaA==}
 
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
@@ -4458,6 +4470,8 @@ snapshots:
     dependencies:
       '@types/node': 22.13.13
 
+  '@types/country-list@2.1.4': {}
+
   '@types/estree@1.0.6': {}
 
   '@types/express-serve-static-core@4.19.6':
@@ -4928,6 +4942,8 @@ snapshots:
       parse-json: 5.2.0
     optionalDependencies:
       typescript: 5.8.2
+
+  country-list@2.3.0: {}
 
   cross-spawn@7.0.6:
     dependencies:

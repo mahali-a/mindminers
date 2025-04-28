@@ -536,6 +536,12 @@ const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ initialCourseId = '' })
                         value="high_school"
                         className="text-sm sm:text-base py-2 sm:py-3 data-[selected]:bg-blue-50 data-[selected]:text-blue-600 data-[selected]:font-medium"
                       >
+                        Primary School
+                      </SelectItem>
+                      <SelectItem
+                        value="high_school"
+                        className="text-sm sm:text-base py-2 sm:py-3 data-[selected]:bg-blue-50 data-[selected]:text-blue-600 data-[selected]:font-medium"
+                      >
                         High School
                       </SelectItem>
                       <SelectItem
