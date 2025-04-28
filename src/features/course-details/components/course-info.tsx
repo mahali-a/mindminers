@@ -151,19 +151,21 @@ const CourseInfoSection: React.FC<CourseProps> = ({ course }) => {
           </CardContent>
         </Card>
 
-        <Card className="border-2 border-black bg-[#F9F6EF] rounded-xl shadow-none">
-          <CardContent className="p-8 py-2">
-            <h3 className="text-2xl font-bold mb-6">Learning techniques</h3>
-            <ul className="space-y-3">
-              {learningTechniques.map((item, index) => (
-                <li key={`technique-${index}`} className="flex items-start">
-                  <span className="text-gray-500 mr-2">•</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
+        {learningTechniques.length > 0 && (
+          <Card className="border-2 border-black bg-[#F9F6EF] rounded-xl shadow-none">
+            <CardContent className="p-8 py-2">
+              <h3 className="text-2xl font-bold mb-6">Learning techniques</h3>
+              <ul className="space-y-3">
+                {learningTechniques.map((item, index) => (
+                  <li key={`technique-${index}`} className="flex items-start">
+                    <span className="text-gray-500 mr-2">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        )}
       </div>
       <div className="flex justify-center mt-10">
         <Link

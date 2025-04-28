@@ -3,6 +3,7 @@
 // Ensure you import motion directly from framer-motion
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 import { CustomButton } from '@/components/common';
 import { SectionHeader } from './section-header';
@@ -31,19 +32,25 @@ const AboutSection = () => {
 
             <p className="text-gray-600 text-base sm:text-lg text-center md:text-left">
               We believe that learning is more than just acquiring knowledge—it&apos;s about transforming how you think.
-              Our mission is to empower minds through effective learning techniques, ensuring that every individual
-              reaches their fullest potential.
+              Our mission is to empower minds through effective learning techniques, and a scientifically proven brain
+              enhancement program, and lifestyle, ensuring that every individual reaches their fullest potential.
+              <br />
+              <br />
+              More gold has been mined from the minds of men than from the deepest vaults in the mines of the earth. (
+              should feature on our landing page
             </p>
 
-            <CustomButton
-              variant="primary"
-              size="md"
-              withIcon={true}
-              endIcon={<ArrowRight className="w-4 h-4 md:w-5 md:h-5" />}
-              className="w-full sm:w-auto cursor-pointer text-sm md:text-base py-2 md:py-3 px-4 md:px-6 h-auto"
-            >
-              Learn more
-            </CustomButton>
+            <Link href="/about">
+              <CustomButton
+                variant="primary"
+                size="md"
+                withIcon={true}
+                endIcon={<ArrowRight className="w-4 h-4 md:w-5 md:h-5" />}
+                className="w-full sm:w-auto cursor-pointer text-sm md:text-base py-2 md:py-3 px-4 md:px-6 h-auto"
+              >
+                Learn more
+              </CustomButton>
+            </Link>
           </div>
 
           <div className="relative h-[250px] sm:h-[300px] md:h-[400px] rounded-xl sm:rounded-3xl overflow-hidden border-2 border-white shadow-[-5px_5px_0px_0px_#FEDE70] sm:shadow-[-10px_10px_0px_0px_#FEDE70] order-1 md:order-2 mb-6 md:mb-0">
